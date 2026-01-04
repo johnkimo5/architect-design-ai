@@ -229,7 +229,7 @@ export default function BoardEditor({ board }: BoardEditorProps) {
       {/* Main Content */}
       <div className="flex-1 flex overflow-hidden">
         {/* Canvas */}
-        <div className="flex-1 relative">
+        <div className="flex-1 relative bg-white">
           <Tldraw
             shapeUtils={customShapeUtils}
             tools={customTools}
