@@ -1,6 +1,7 @@
 import { getBoards, createBoard, deleteBoard, signOut } from './actions'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { DeleteBoardButton } from './DeleteBoardButton'
 
 export default async function Home() {
   const boards = await getBoards()
@@ -77,20 +78,7 @@ export default async function Home() {
                   </p>
                 </Link>
                 <div className="px-4 pb-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <form action={handleDelete}>
-                    <input type="hidden" name="boardId" value={board.id} />
-                    <button
-                      type="submit"
-                      className="text-sm text-red-600 hover:text-red-800"
-                      onClick={(e) => {
-                        if (!confirm('Are you sure you want to delete this board?')) {
-                          e.preventDefault()
-                        }
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </form>
+                  <DeleteBoardButton boardId={board.id} onDelete={handleDelete} />
                 </div>
               </div>
             ))}
