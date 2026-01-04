@@ -2,7 +2,7 @@
 
 import { useState, RefObject } from 'react'
 import { Editor, getSnapshot } from 'tldraw'
-import { gradeDiagram, GradeResponse } from '@/app/actions'
+import { gradeDiagram, GradeResponse } from '@/app/grade-actions'
 
 interface GradingPanelProps {
   editorRef: RefObject<Editor | null>
