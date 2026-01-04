@@ -1,5 +1,5 @@
 import { getBoard } from '@/app/actions'
-import BoardEditor from './BoardEditor'
+import BoardEditorWrapper from './BoardEditorWrapper'
 import { notFound } from 'next/navigation'
 
 interface PageProps {
@@ -7,11 +7,11 @@ interface PageProps {
 }
 
 export default async function BoardPage({ params }: PageProps) {
-  const { id } = await params
+    const { id } = await params
 
   try {
     const board = await getBoard(id)
-    return <BoardEditor board={board} />
+    return <BoardEditorWrapper board={board} />
   } catch {
     notFound()
   }
