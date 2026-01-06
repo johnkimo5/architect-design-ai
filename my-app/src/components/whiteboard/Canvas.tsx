@@ -6,7 +6,7 @@ import 'tldraw/tldraw.css'
 export default function Canvas() {
   return (
     <div style={{ position: 'fixed', inset: 0 }}>
-      <Tldraw licenseKey={process.env.TLDRAW_LICENSE_KEY} />
+      <Tldraw licenseKey={process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY} />
     </div>
   )
 }

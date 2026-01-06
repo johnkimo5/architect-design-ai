@@ -231,7 +231,7 @@ export default function BoardEditor({ board }: BoardEditorProps) {
         {/* Canvas */}
         <div className="flex-1 relative bg-white">
           <Tldraw
-            licenseKey={process.env.TLDRAW_LICENSE_KEY}
+            licenseKey={process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY}
             shapeUtils={customShapeUtils}
             tools={customTools}
             overrides={uiOverrides}
